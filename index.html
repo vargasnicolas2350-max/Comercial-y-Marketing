@@ -400,7 +400,7 @@ btn.addEventListener("click", async ()=>{
   }
 
   const { error } = await supabase
-    .from("pronosticos")
+    .from("comfenalco")
     .insert({
       nombre,
       colombia: Number(colombia),
