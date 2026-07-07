@@ -11,7 +11,7 @@
   --verde-oscuro:#062419;
   --dorado:#ffd700;
   --colombia:#ffcd00;
-  --suiza:#ce1126;
+  --suiza:#da291c;
   --blanco:#ffffff;
 }
 
@@ -87,9 +87,13 @@ h1{
 }
 
 .team .flag{
-  font-size:34px;
   display:block;
-  margin-bottom:4px;
+  margin:0 auto 6px;
+  width:48px;
+  height:36px;
+  object-fit:cover;
+  border-radius:4px;
+  box-shadow:0 2px 6px rgba(0,0,0,.4);
 }
 
 .team .name{
@@ -253,12 +257,12 @@ button:active{
 
     <div class="scoreboard">
       <div class="team">
-        <span class="flag">🇨🇴</span>
+        <img class="flag" src="https://flagcdn.com/w80/co.png" alt="Colombia">
         <span class="name">COLOMBIA</span>
       </div>
       <div class="vs">VS</div>
       <div class="team">
-        <span class="flag"SZ</span>
+        <img class="flag" src="https://flagcdn.com/w80/ch.png" alt="Suiza">
         <span class="name">SUIZA</span>
       </div>
     </div>
@@ -368,7 +372,11 @@ async function cargarPronosticos(){
     fila.innerHTML = `
       <div>
         <strong>${item.nombre}</strong><br>
-        <span class="marcador">🇨🇴 ${item.colombia} - ${item.suiza} 🇬🇭</span>
+        <span class="marcador">
+          <img src="https://flagcdn.com/w40/co.png" alt="Colombia" style="width:20px;vertical-align:middle;border-radius:2px;margin-right:4px;">
+          ${item.colombia} - ${item.suiza}
+          <img src="https://flagcdn.com/w40/ch.png" alt="Suiza" style="width:20px;vertical-align:middle;border-radius:2px;margin-left:4px;">
+        </span>
       </div>
     `;
 
@@ -381,7 +389,7 @@ btn.addEventListener("click", async ()=>{
 
   // Verificar si la polla ya cerró
   if(new Date() >= fechaCierre){
-    alert("🔒 La Polla Familia Peluche ya está cerrada.");
+    alert("🔒 La Polla Comercial y Marketing ya está cerrada.");
     return;
   }
 
