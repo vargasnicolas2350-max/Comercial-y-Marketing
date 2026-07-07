@@ -340,7 +340,7 @@ setInterval(actualizarContador, 1000);
 async function cargarPronosticos(){
 
   const { data, error } = await supabase
-    .from("pronosticos")
+    .from("Comfenalco")
     .select("*")
     .order("created_at",{ ascending:false });
 
